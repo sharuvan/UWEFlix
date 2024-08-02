@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Settlement</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-button/mdc-button.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-list/mdc-list.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-theme/mdc-theme.min.css">
+</head>
+<body class="mdc-theme--background">
+    <div class="mdc-theme--surface">
+        <h1 class="mdc-typography--headline4">Account Settlement</h1>
+        <h2 class="mdc-typography--headline6">Balance: £{{ account.balance }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <ul class="mdc-list">
+                {% for statement in statements %}
+                    <li class="mdc-list-item">
+                        Date: {{ statement.date }} - Debit: £{{ statement.debit }} Credit: £{{ statement.credit }}
+                    </li>
+                {% endfor %}
+            </ul>
+            <button class="mdc-button mdc-button--raised mdc-button--secondary" type="submit">Settle Account</button>
+        </form>
+    </div>
+</body>
+</html>

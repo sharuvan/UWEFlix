@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Film</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-button/mdc-button.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-textfield/mdc-textfield.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-theme/mdc-theme.min.css">
+</head>
+<body class="mdc-theme--background">
+    <div class="mdc-theme--surface">
+        <h1 class="mdc-typography--headline4">Add Film</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mdc-text-field mdc-text-field--outlined">
+                <input type="text" id="title" class="mdc-text-field__input" name="title" required>
+                <label for="title" class="mdc-floating-label">Title</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div class="mdc-text-field mdc-text-field--outlined">
+                <input type="text" id="age_rating" class="mdc-text-field__input" name="age_rating" required>
+                <label for="age_rating" class="mdc-floating-label">Age Rating</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div class="mdc-text-field mdc-text-field--outlined">
+                <input type="number" id="duration" class="mdc-text-field__input" name="duration" required>
+                <label for="duration" class="mdc-floating-label">Duration (minutes)</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div class="mdc-text-field mdc-text-field--outlined">
+                <textarea id="trailer_description" class="mdc-text-field__input" name="trailer_description" required></textarea>
+                <label for="trailer_description" class="mdc-floating-label">Trailer Description</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <button class="mdc-button mdc-button--raised mdc-button--secondary" type="submit">Add Film</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-textfield/mdc-textfield.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-textfield/mdc-textfield.min.js"></script>
+</body>
+</html>

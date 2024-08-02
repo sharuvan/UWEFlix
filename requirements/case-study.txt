@@ -1,0 +1,121 @@
+UWEFlix Case Study
+
+The entirely fictitious “UWEFlix” cinema on Frenchay Campus, UWE, has a limited “pay-as-you-enter” ticketing system in place currently. However, to enable students to place 
+various advance bookings, UWEFlix are investigating the possibility of installing an 
+upgraded Cinema Booking System to replace the current system. The following goals and 
+requirements have resulted from initial stakeholder discussions of the likely scenarios of 
+usage that such a system might offer.
+The first goal of the Cinema Booking system is to enable students to purchase cinema 
+tickets in advance of the showing either via Internet while still offering customers the 
+traditional purchase of tickets on entry to the cinema. The second goal of the Cinema 
+Booking system is to enable university clubs to purchase blocks of tickets at discounted 
+prices, again in advance via Internet, and also to allow university clubs to make payments 
+on account.
+Discussions with the UWEFlix Management Team and student union stakeholders reveal 
+that it is required that the system-to-be must use the existing Payment Transaction System, 
+which works perfectly adequately at the moment. Other discussions with the UWE student 
+experience team raise the importance of user interface quality with respect to both UK and 
+international students, and students with mild visual impairments, e.g. colour blindness. 
+Further discussions reveal that the Cinema Manager (or a suitable employee in the role of 
+Cinema Manager) wishes to be able to register details of student clubs and their 
+representatives. Club details include club name, Address details and Contact details. 
+Address details include street number, street, city and post code. Contact details include 
+land-line telephone number, mobile telephone number, and email address. Representative 
+details include representative first name, last name, and date of birth. Thus on registration, 
+a unique Club Representative number and unique password is allocated to the Club 
+Representative.
+Discussions with the UWEFlix Sales and Marketing team reveal that the new system must 
+present information about the cinema and its films in an attractive manner over the 
+internet. In order to achieve this, the new system must provide the capability for the 
+Cinema Manager (or suitable employee in the role of Cinema Manager) to add film details 
+include title, age rating, duration, and short trailer description. The new system must also 
+provide the capability to delete details of an obsolete film, although the film can only be 
+deleted if there are no showings allocated to it. In a similar manner, there must be a 
+capability for an employee in the Cinema Manager to add details of a new screen in the 
+cinema, including the capacity of the screen in terms of the numbers of seats. Lastly, films 
+can be shown on many occasions on various days, so the new system must provide a 
+capability to add details of a new showing of a film, including the date and time of the 
+showing.
+The UWEFlix Accounts Department have also been involved in discussions, as they wish to 
+manage the student club accounts via the new system. For instance, the Account Manager 
+wishes to be able to add a new account for a previously registered Club. In this scenario, 
+The Account Manager provides Account details including Account Title (both the surname 
+and first initial of the employee, or the name of the university club) and payment card 
+details for the account (card number and expiry date). The Account Manager also provides 
+a discount rate for the account. It is required that a unique account number is generated 
+for the account.
+To provide full account management facilities in the new system, the Account Manager 
+must also be able to amend an account. In this situation, the new system is required to 
+supply with a list of all accounts, from which the Account Manager can then selects an 
+individual account, for which the details of the account are displayed. The Account 
+Manager then amends the Account details and the amendments are recorded on the 
+system-to-be.
+The UWEFlix Accounts Department stated that the new system is required to display 
+account statements, to be provided at the end of every calendar month. In the scenario, 
+the Account Manager requests to view end of month account statements and the new 
+system supplies a list of all possible end of month account statements. The Account 
+Manager selects one account and is provided with a statement of the last month’s debit 
+and credit transactions on the account.
+Lastly, all the stakeholders are keen to promote a “green” agenda with respect to energy 
+and resource consumption. The stakeholders are not sure how this may be achieved
+technically, but state that sustainability is an important system requirement. 
+Discussions then moved on to how customers and student representatives might use the 
+new system-to-be.
+It is envisaged that in order to purchase advance tickets, the Customer selects a date and is 
+provided with a list of available showings for that date, including the time of the showings. 
+The Customer then selects a showing and is provided with details of the showing, including 
+film title, age rating, duration, and a short trailer description. The Customer then selects 
+the quantity of tickets required, together with the ticket type. Ticket types may be one of 
+student, child, or adult. The total cost of the booking is supplied to the customer. If the 
+Customer is happy, they then confirm their booking request. If there are insufficient seats 
+available at the showing, the booking request is cancelled and the Customer is invited to 
+make a further booking request. However, if there are sufficient seats, the Customer 
+confirms the booking and proceeds. The Customer then enters their payment card details, 
+which includes cardholder name, card number and expiry date. Payment cards may be one 
+of two types – credit card or payment card. The payment is transacted via the existing 
+Payment Transaction System.
+UWEFlix stress that the scenario for purchase of tickets by Club Representatives is very 
+different. The Club Representative provides their club rep number and password, which are
+validated. If either the club rep number or the password are incorrect, the club 
+representative re-enters their details for re-validation. Once successfully validated, the Club 
+Representative then nominates a date and is provided with a list of available showings for 
+that date, including the time of the showings. The Club Representative selects a showing 
+and is provided with details of the showing, including film title, age rating, duration, and a 
+short trailer description. The Club Representative then selects the quantity of tickets 
+required, which must be no less than ten. A ticket type of student is applied to the block 
+booking. A club discount is applied to the total cost of the booking, and then the total cost 
+is supplied to the Club Representative. If the Club Representative is happy, they then 
+confirm their club’s booking request. If there are insufficient seats available for the block 
+booking at the showing, the block booking request is cancelled and the Club Representative 
+is invited to make a further booking request. However, if there are sufficient seats, the cost 
+of the block booking is then debited from the club’s account.
+UWEFlix then require the new system-to-be to have the capability for Club Representatives 
+to settle their accounts monthly. Thus as before, the Club Representative provides their 
+club number and password, which are validated. If either the club number or the password 
+is incorrect, the Club Representative re-enters their details for re-validation. Once 
+successfully validated, the Club Representative provides their unique club account number 
+and all transactions for the current month together with the outstanding balance of their 
+club account is displayed. The Club Representative authorises settlement and payment for 
+the outstanding balance is transacted against the Account via the existing Payment 
+Transaction System. The payment is also credited to the university club account. 
+Lastly, for efficiency’s sake, UWEFLix wish that customers and club representatives be able 
+to collect their own tickets on entry to the cinema auditorium. So on the event of a 
+Customer or Club representative swiping their payment card through an attractive and easy 
+to use swipe / printer device, the system determines if a current booking is associated with 
+the payment card. If a booking currently exists for the payment card, the swipe / printer 
+device prints the appropriate tickets for the booking. If no booking exists, a friendly 
+message is supplied to the Customer or Club Representative.
+
+The required Quality of Service measurements for the new system-to-be are as follows:
+- The system MUST be capable of supporting up to 300 seat capacity in the cinema
+- The system MUST be capable of dealing with up to 2,500 bookings in any day
+- The system MUST respond to every mouse click in less than one second for 99% of 
+all mouse click events.
+- The system MUST be capable of handling 10 simultaneous requests for advance 
+booking per minute.
+- The system MUST be available for 24 hours a day, 365 days of the year.
+- The system MUST provide an understandable user interface for a variety of students 
+including UK and international students, and those with mild visual impairments 
+such as colour blindness. 
+- The system MUST monitor and adapt energy consumption wherever possible to 
+promote a sustainable approach to system performance.

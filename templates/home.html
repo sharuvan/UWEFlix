@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UWEFlix Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-button/mdc-button.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-card/mdc-card.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-typography/mdc-typography.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-theme/mdc-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="mdc-typography mdc-theme--background">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <span class="mdc-top-app-bar__title">UWEFlix</span>
+            </section>
+        </div>
+    </header>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <h1 class="mdc-typography--headline4 mdc-theme--primary">Welcome to UWEFlix</h1>
+                    <p class="mdc-typography--body1">Book your tickets now!</p>
+                    <a href="{% url 'showings' %}" class="mdc-button mdc-button--raised">View Showings</a>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <div class="mdc-card">
+                        <div class="mdc-card__primary-action">
+                            <div style="padding: 16px;">
+                                <h2 class="mdc-typography--headline5">Are you a student or club manager?</h2>
+                                <p class="mdc-typography--body1">Log in to book tickets using your account balance.</p>
+                                <a href="{% url 'login' %}" class="mdc-button mdc-button--raised">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <div class="mdc-card">
+                        <div class="mdc-card__primary-action">
+                            <div style="padding: 16px;">
+                                <h2 class="mdc-typography--headline5">Ordinary Customer?</h2>
+                                <p class="mdc-typography--body1">You can book tickets without logging in.</p>
+                                <a href="{% url 'showings' %}" class="mdc-button mdc-button--raised">Book Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-top-app-bar/mdc-top-app-bar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-top-app-bar/mdc-top-app-bar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-ripple/mdc-ripple.min.js"></script>
+    <script>
+        // Initialize Material Components
+        const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+        const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(topAppBarElement);
+
+        const buttons = document.querySelectorAll('.mdc-button');
+        buttons.forEach(button => mdc.ripple.MDCRipple.attachTo(button));
+
+        const cards = document.querySelectorAll('.mdc-card__primary-action');
+        cards.forEach(card => mdc.ripple.MDCRipple.attachTo(card));
+    </script>
+</body>
+</html>

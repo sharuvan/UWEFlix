@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Club List
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Clubs</h1>
+    
+    <!-- Add a new club button -->
+    <div class="mb-4">
+        <a href="{% url 'add_club' %}" class="btn btn-primary">Add New Club</a>
+    </div>
+
+    <!-- Club list table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>Representative</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for club in clubs %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ club.name }}</td>
+                <td>{{ club.address }}</td>
+                <td>{{ club.contact }}</td>
+                <td>{{ club.representative.username }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

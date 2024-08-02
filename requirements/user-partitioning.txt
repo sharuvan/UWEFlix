@@ -1,0 +1,96 @@
+User Partitioning
+
+The Cinema Manager:
+The Cinema Manager (or a suitable employee in the role of Cinema Manager) must be able to add, 
+modify and delete details of student clubs and their representatives.
+Club details include club name, Address details and Contact details. Address details include street 
+number, street, city, and post code.
+Contact details include land-line telephone number, mobile telephone number, email address, 
+representative first name, last name, and date of birth.
+On registration, a unique Club Representative number and unique password is allocated to the Club 
+Representative.
+Cinema Manager (or suitable employee in the role of Cinema Manager) to add, modify and delete 
+film details that include title, age rating, duration, and short trailer description.
+A film can only be deleted if there are no showings allocated to it.
+Cinema Manager to add, modify and delete details of a screen in the cinema, including the capacity 
+of the screen in terms of the numbers of seats.
+Cinema Manager to add, modify and delete details of a new showing of a film, including the screen, 
+date, and time of the showing.
+The Cinema Manager must be able to turn social distancing on and off.
+When social distancing is turned ‘on’, both household bubbles and individuals must be allocated 
+specific, socially distanced seats within the auditorium; people are no longer allowed to sit where 
+they like.
+
+The Account Manager:
+The Account Manager must be able to add, modify or delete an account for a previously registered 
+Club. 
+The Account details include Account Title (both the surname and first initial of the employee, or the 
+name of the university club) and payment card details for the account (card number and expiry 
+date). 
+The Account Manager also provides a discount rate for an account (default 0). 
+On setting up an account a unique account number is generated for the account.
+The Account Manager must be able to view a list of accounts.
+The Account Manager must be able to select an individual account from a list of accounts to view, 
+modify or delete.
+The system must create account statements at the end of every calendar month.
+The Account Manager must be able to view a list of all ‘end of month’ account statements.
+The Account Manager must be able to select an individual account statement from a list to view last 
+month’s s debit and credit transactions.
+
+The Customer:
+The Customer must be able to purchase cinema tickets in advance of the showing via Internet.
+The Customer must be able to purchase tickets on entry to the cinema.
+The Customer must be able to select a date and be provided with a list of available showings for that 
+date, including the time of the showings.
+The Customer must be able to select a showing from a list and be provided with details of the 
+showing, including film title, age rating, duration, and a short trailer description.
+The Customer must be able to select the quantity of tickets required, together with the ticket type 
+(student, child, or adult).
+On selecting a quantity of tickets for a showing if there are insufficient seats the customer’s booking 
+is declined.
+On selecting a quantity of tickets for a showing, if there are sufficient seats, the customer is 
+presented with the cost of the booking.
+After being presented with the cost of a booking the customer can confirm or decline the booking.
+If a customer confirms a booking for a showing they must then enter their payment card details, 
+which includes cardholder name, card number and expiry date (credit and debit cards accepted).
+On successfully booking seats to a showing by a customer individual seats are not allocated; 
+customers can sit where they like (unless social distancing is turned on).
+
+The Club Representative:
+The Club Representative must be able to purchase blocks of tickets at discounted prices in advance 
+via Internet.
+The Club Representatives can log into the system by providing their club rep number and password, 
+which are then validated.
+While the Club Representatives is logging in, if either the club rep number or the password are 
+incorrect, the club representative re-enters their details for re-validation.
+Once logged in the Club Representative nominates a date and is provided with a list of available 
+showings for that date, including the film and the time of the showing.
+The Club Representative must be able to select a showing from a list and be provided with details of 
+the showing, including film title, age rating, duration, and a short trailer description.
+The Club Representative must be able to select the quantity of tickets required for a showing, which 
+must be no less than ten, a ticket type of student is automatically applied to the booking.
+On selecting a quantity of tickets for a showing if there are insufficient seats the Club 
+Representative’s booking is declined.
+On selecting a quantity of tickets for a showing, if there are sufficient seats, the Club Representative 
+is presented with the cost of the booking after the club discount has been applied.
+After being presented with the cost of a booking the Club Representative can confirm or decline the 
+booking.
+If the Club Representative confirms a booking, then the cost of the block booking is then debited 
+from the club’s account.
+The Club Representative must be able to settle their accounts monthly by entering a valid club 
+number and password.
+The Club Representative must be able to provide their unique club account number and then view 
+all the transactions for the current month together with the outstanding balance of their club 
+account.
+The Club Representative must be able to authorise settlement and payment for the outstanding 
+account balance which is transacted against the Account using the existing Payment Transaction 
+System; the payment is then credited to the university club account.
+
+Ticket Collection:
+Customers and Club Representatives must be able to collect their own tickets on entry to the cinema 
+auditorium by swiping their payment card through an attractive and easy to use swipe / printer 
+device, the system determines if a current booking is associated with the payment card and if so the 
+swipe / printer device prints the appropriate tickets for the booking.
+If Customers and Club Representatives swipe an invalid payment card through the attractive and 
+easy to use swipe / printer device, then a friendly message is supplied to the Customer or Club 
+Representative.

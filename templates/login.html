@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-button/mdc-button.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-textfield/mdc-textfield.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/mdc-theme/mdc-theme.min.css">
+</head>
+<body class="mdc-theme--background">
+    <div class="mdc-theme--surface">
+        <h1 class="mdc-typography--headline4">Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mdc-text-field mdc-text-field--outlined">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                <label for="username" class="mdc-floating-label">Username</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <div class="mdc-text-field mdc-text-field--outlined">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+                <label for="password" class="mdc-floating-label">Password</label>
+                <div class="mdc-line-ripple"></div>
+            </div>
+            <button class="mdc-button mdc-button--raised" type="submit">Login</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@material/mdc-textfield/mdc-textfield.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+Functional Requirements
+
+The system-to-be is going to be tested and assessed with some test cases to make sure the 
+following functional requirements are achieved: (test case data will be released in due course):
+1. The system accepts different user types and grant access to relevant functionalities 
+subject to user privileges. 
+2. The Login/Logout functions work in line with Sessions, which expected to end after 
+20 non-active time. Terminated sessions logouts the user. 
+3. An ordinary customer does not need to login the system to book a seat and buy the 
+ticket providing identification details. But a student or a club manager 
+(representative) needs to login the system to gain access to booking facilities and 
+buying tickets. The payment should be arranged to take off credit from student’s or 
+club manager’s account, where each student and club manager should have credit 
+account so as to be able to buy tickets. On the other hand, payment can be arranged 
+based on some assumptions for ordinary customers. 
+4. There should be functionalities attached to each student and club manager users to 
+top up their credits. 
+5. The duties/responsibilities and privileges of Cinema managers and workers can be 
+retrieved/concluded from UWEFlix document, which includes advertising movies, 
+arranging capacities, pricing the tickets, and applying discounts. 
+6. Adding new student users or club managers is within the responsibilities of cinema 
+manager or worker, while the application should be made by candidate users. 
+7. Account manager looks after the cinema’s finance, can observe daily transactions, 
+generate periodical, (e.g., monthly or annually) financial reports.
+8. Cancellation of bookings can be done upon request and subject to cinema manager’s 
+approval. 
+9. Changes in the prices and applying discounts should also be available for cinema 
+managers or workers, while students and club managers should be able to request 
+for further discounts. 
+10. Front-end design and further security measures beyond authentication will be 
+considered as add-on.
