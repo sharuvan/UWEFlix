@@ -175,6 +175,8 @@ export const getMyAccount = () => api.get('/account/my_account/');
 
 export const getMyTransactions = () => api.get('/account/my_transactions/');
 
+export const getMyTickets = () => api.get('/account/my_tickets/');
+
 export const getDailyTransactions = () => api.get('/accounts/daily_transactions/');
 export const getMonthlyReport = () => api.get('/accounts/monthly_report/');
 export const getAnnualReport = () => api.get('/accounts/annual_report/');
