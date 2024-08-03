@@ -14,6 +14,7 @@ import ManageFilms from './manage_films';
 import ManageScreens from './manage_screens';
 import ManageShowings from './manage_showings';
 import ManageBookings from './manage_bookings';
+import MyTickets from './myTickets';
 import Appbar from '../appbar';
 
 const drawerWidth = 240;
@@ -33,6 +34,7 @@ export default function Dashboard() {
   const menuItemsStudent = [
     menuEntryWelcome,
     { text: "Book Tickets", view: <Book /> },
+    { text: "My Tickets", view: <MyTickets /> },
     { text: "Account", view: <Account /> },
   ];
 
