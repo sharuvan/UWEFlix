@@ -2,11 +2,13 @@
 import { useState, useEffect } from 'react';
 import { getMyTickets } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
-import { Container, Table, TableBody, TableCell, TableHead, TableRow, Paper, Typography, Alert } from '@mui/material';
+import { Container, Table, TableBody, TableCell, TableHead, TableRow, Paper, Typography, Snackbar, Alert } from '@mui/material';
 
 const MyTickets = () => {
   const [tickets, setTickets] = useState([]);
   const [error, setError] = useState('');
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
   const user = useAuth();
 
   const fetchTickets = async () => {
@@ -23,6 +25,11 @@ const MyTickets = () => {
   useEffect(() => {
     fetchTickets();
   }, [user]);
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+    setSnackbarMessage('');
+  };
 
   return (
     <Container maxWidth="md">
@@ -56,6 +63,17 @@ const MyTickets = () => {
           </TableBody>
         </Table>
       </Paper>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </Container>
   );
 };
