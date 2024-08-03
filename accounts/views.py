@@ -5,6 +5,7 @@ from .forms import UserLoginForm, CreditTopUpForm
 from .models import User, Club, Account, AccountStatement, Transaction, Payment
 from .serializers import UserSerializer, ClubSerializer, AccountSerializer, \
     AccountStatementSerializer, TransactionSerializer, PaymentSerializer
+from cinema.models import Ticket, Seat
 from rest_framework import viewsets, generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -256,6 +257,31 @@ class AccountViewSet(viewsets.ModelViewSet):
         return Response({
             "transactions": transactions_serializer.data,
             "payments": payments_serializer.data
+        })
+    
+    @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
+    def my_tickets(self, request):
+        account = Account.objects.get(user=request.user)
+        tickets = Ticket.objects.filter(user=account.user)
+
+        def format_ticket(ticket):
+            seats = Seat.objects.filter(ticket=ticket)
+            seat_numbers = [f"{seat.row}-{seat.column}" for seat in seats]
+            return {
+                'id': ticket.id,
+                'date': ticket.purchase_date,
+                'total_amount': ticket.showing.ticket_price * ticket.quantity,
+                'details': {
+                    'film_title': ticket.showing.film.title,
+                    'show_time': ticket.showing.show_time,
+                    'seats': seat_numbers,
+                }
+            }
+
+        tickets_data = [format_ticket(ticket) for ticket in tickets]
+
+        return Response({
+            "tickets": tickets_data
         })
 
     @action(detail=False, methods=['get'])
