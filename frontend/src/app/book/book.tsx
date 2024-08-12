@@ -189,7 +189,7 @@ export default function Book() {
               onClick={() => setSelectedShowing(showing)}
             >
               <Typography variant="h6">{showing.film.title}</Typography>
-              <Typography variant="body2">Rating: {showing.film.age_rating}</Typography>
+              <Typography variant="body2">Age Rating: {showing.film.age_rating}</Typography>
               <Typography variant="body2">Duration: {showing.film.duration} mins</Typography>
               <Typography variant="body2">Show Time: {new Date(showing.show_time).toUTCString()}</Typography>
               <Typography variant="body2">Price: $ {getPrice(showing)}</Typography>
@@ -215,7 +215,7 @@ export default function Book() {
                   onClick={() => setSelectedShowing(showing)}
                 >
                   <Typography variant="h6">{showing.film.title}</Typography>
-                  <Typography variant="body2">Rating: {showing.film.age_rating}</Typography>
+                  <Typography variant="body2">Age Rating: {showing.film.age_rating}</Typography>
                   <Typography variant="body2">Duration: {showing.film.duration} mins</Typography>
                   <Typography variant="body2">
                     Show Time: {new Date(showing.show_time).toUTCString()}

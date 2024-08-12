@@ -161,6 +161,13 @@ class TicketViewSet(viewsets.ModelViewSet):
         if tickets_sold + int(quantity) > total_capacity:
             return Response({'error': 'Insufficient seats available'}, status=status.HTTP_200_OK)
 
+        ticket = Ticket.objects.create(
+            showing=showing,
+            user=request.user if not request.user.is_anonymous else None,
+            ticket_type=data['ticket_type'],
+            quantity=quantity,
+        )
+
         if user:
             try:
                 account = Account.objects.get(user=user)
@@ -171,13 +178,6 @@ class TicketViewSet(viewsets.ModelViewSet):
                 account=account,
                 ticket=ticket,
             )
-        
-        ticket = Ticket.objects.create(
-            showing=showing,
-            user=request.user if not request.user.is_anonymous else None,
-            ticket_type=data['ticket_type'],
-            quantity=quantity,
-        )
 
         showing.tickets_sold += int(quantity)
         showing.save()
