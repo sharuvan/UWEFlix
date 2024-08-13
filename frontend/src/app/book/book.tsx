@@ -180,7 +180,7 @@ export default function Book() {
         onChange={(e) => setDate(e.target.value)}
       />
 
-<Grid container spacing={3}>
+      <Grid container spacing={3}>
         {showings.map((showing) => (
           <Grid item xs={12} sm={6} md={4} key={showing.id}>
             <Paper
@@ -237,7 +237,7 @@ export default function Book() {
             Selected Showing Details
           </Typography>
           <Typography variant="body1">Title: {selectedShowing.film.title}</Typography>
-          <Typography variant="body1">Rating: {selectedShowing.film.age_rating}</Typography>
+          <Typography variant="body1">Age Rating: {selectedShowing.film.age_rating}</Typography>
           <Typography variant="body1">Duration: {selectedShowing.film.duration} mins</Typography>
           <Typography variant="body1">Description: {selectedShowing.film.trailer_description}</Typography>
           <Typography variant="body1">
@@ -328,6 +328,12 @@ export default function Book() {
             value={paymentInfo.securityCode}
             onChange={(e) => handlePaymentInfoChange('securityCode', e.target.value)}
           />
+          <Typography variant='h6'>Contact Information</Typography>
+          <TextField
+            label="Email Address"
+            fullWidth
+            margin="normal"
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setDialogOpen(false)} color="secondary">
@@ -338,7 +344,6 @@ export default function Book() {
           </Button>
         </DialogActions>
       </Dialog>
-
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={3000}

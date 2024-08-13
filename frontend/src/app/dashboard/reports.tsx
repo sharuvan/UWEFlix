@@ -42,12 +42,13 @@ export default function Reports() {
                                 <TableCell>{new Date(transaction.date).toLocaleDateString()}</TableCell>
                                 <TableCell>{transaction.account_title}</TableCell>
                                 <TableCell>{transaction.details}</TableCell>
-                                <TableCell>{transaction.price}</TableCell>
+                                <TableCell>{transaction.total_amount}</TableCell>
                             </TableRow>
                         ))}
                         {dailyTransactions.payments.map((payment) => (
                             <TableRow key={payment.id}>
                                 <TableCell>{new Date(payment.payment_date).toLocaleDateString()}</TableCell>
+                                <TableCell>{payment.account_title}</TableCell>
                                 <TableCell>Payment</TableCell>
                                 <TableCell>{payment.amount}</TableCell>
                             </TableRow>
@@ -56,7 +57,7 @@ export default function Reports() {
                 </Table>
             </TableContainer>
 
-            <Button variant="contained" color="primary" onClick={handleGenerateMonthlyReport} sx={{ mt: 3 }}>
+            <Button variant="contained" color="primary" onClick={handleGenerateMonthlyReport} sx={{ my: 3, mr:3 }}>
                 Generate Monthly Report
             </Button>
 
@@ -81,12 +82,13 @@ export default function Reports() {
                                         <TableCell>{new Date(transaction.date).toLocaleDateString()}</TableCell>
                                         <TableCell>{transaction.account_title}</TableCell>
                                         <TableCell>{transaction.details}</TableCell>
-                                        <TableCell>{transaction.price}</TableCell>
+                                        <TableCell>{transaction.total_amount}</TableCell>
                                     </TableRow>
                                 ))}
                                 {monthlyReport.payments.map((payment) => (
                                     <TableRow key={payment.id}>
                                         <TableCell>{new Date(payment.payment_date).toLocaleDateString()}</TableCell>
+                                        <TableCell>{payment.account_title}</TableCell>
                                         <TableCell>Payment</TableCell>
                                         <TableCell>{payment.amount}</TableCell>
                                     </TableRow>
@@ -97,7 +99,7 @@ export default function Reports() {
                 </div>
             )}
 
-            <Button variant="contained" color="primary" onClick={handleGenerateAnnualReport} sx={{ mt: 3 }}>
+            <Button variant="contained" color="primary" onClick={handleGenerateAnnualReport} sx={{ my: 3 }}>
                 Generate Annual Report
             </Button>
 
@@ -122,12 +124,13 @@ export default function Reports() {
                                         <TableCell>{new Date(transaction.date).toLocaleDateString()}</TableCell>
                                         <TableCell>{transaction.account_title}</TableCell>
                                         <TableCell>{transaction.details}</TableCell>
-                                        <TableCell>{transaction.price}</TableCell>
+                                        <TableCell>{transaction.total_amount}</TableCell>
                                     </TableRow>
                                 ))}
                                 {annualReport.payments.map((payment) => (
                                     <TableRow key={payment.id}>
                                         <TableCell>{new Date(payment.payment_date).toLocaleDateString()}</TableCell>
+                                        <TableCell>{payment.account_title}</TableCell>
                                         <TableCell>Payment</TableCell>
                                         <TableCell>{payment.amount}</TableCell>
                                     </TableRow>

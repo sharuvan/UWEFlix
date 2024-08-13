@@ -74,6 +74,7 @@ class TransactionSerializer(serializers.ModelSerializer):
         return representation
 
 class PaymentSerializer(serializers.ModelSerializer):
+    account_title = serializers.CharField(source='account.account_title')
     class Meta:
         model = Payment
-        fields = '__all__'
+        fields = ['account_title', 'amount', 'payment_date', 'status', 'transaction_id']
