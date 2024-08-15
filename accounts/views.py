@@ -20,7 +20,7 @@ from datetime import datetime
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import action
 from datetime import date, timedelta
-from django.db.models import Sum, Max
+from django.db.models import Sum, Max, F
 from django.contrib.auth.models import Group
 import random, string
 from django.contrib.auth import logout
@@ -304,7 +304,9 @@ class AccountViewSet(viewsets.ModelViewSet):
         transactions = Transaction.objects.filter(date__gte=first_day)
         payments = Payment.objects.filter(payment_date__gte=first_day)
 
-        total_credits = transactions.aggregate(Sum('ticket__showing__ticket_price'))['ticket__showing__ticket_price__sum'] or 0
+        transactions = transactions.annotate(total_price=F('ticket__showing__ticket_price') * F('ticket__quantity'))
+
+        total_credits = transactions.aggregate(Sum('total_price'))['total_price__sum'] or 0
         total_debits = payments.aggregate(Sum('amount'))['amount__sum'] or 0
 
         return Response({
@@ -320,7 +322,9 @@ class AccountViewSet(viewsets.ModelViewSet):
         transactions = Transaction.objects.filter(date__gte=first_day)
         payments = Payment.objects.filter(payment_date__gte=first_day)
 
-        total_credits = transactions.aggregate(Sum('ticket__showing__ticket_price'))['ticket__showing__ticket_price__sum'] or 0
+        transactions = transactions.annotate(total_price=F('ticket__showing__ticket_price') * F('ticket__quantity'))
+
+        total_credits = transactions.aggregate(Sum('total_price'))['total_price__sum'] or 0
         total_debits = payments.aggregate(Sum('amount'))['amount__sum'] or 0
 
         return Response({

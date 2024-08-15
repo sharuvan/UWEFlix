@@ -82,7 +82,7 @@ export default function AccountStatements() {
                                     <TableRow key={transaction.id}>
                                         <TableCell>{new Date(transaction.date).toLocaleDateString()}</TableCell>
                                         <TableCell>{transaction.details}</TableCell>
-                                        <TableCell>{transaction.price}</TableCell>
+                                        <TableCell>{transaction.total_amount}</TableCell>
                                     </TableRow>
                                 ))}
                                 {statementsData.debit_transactions.map((payment) => (
