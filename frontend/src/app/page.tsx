@@ -44,9 +44,9 @@ export default function Home() {
         <Typography variant="h3" gutterBottom>
           UWEFlix Cinema Booking System
         </Typography>
-        {/* <Typography variant="h6" gutterBottom>
-          Your destination for booking tickets and managing clubs
-        </Typography> */}
+        <Typography variant="h6" gutterBottom>
+          Conveniently make bookings and manage all things related to UWEFlix, online.
+        </Typography>
         <Typography variant="body1">
           {!user_type?.length && 'Student, Club Manager, Account Manager or Cinema Manager?'}
           {user_type?.length && "You're logged in"}
